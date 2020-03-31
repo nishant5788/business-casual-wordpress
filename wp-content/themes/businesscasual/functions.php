@@ -7,8 +7,9 @@ function site_files() {
     wp_enqueue_style('bootstrap_style',get_theme_file_uri('/vendor/bootstrap/css/bootstrap.min.css'));
     wp_enqueue_style('site_styles',get_theme_file_uri('/css/business-casual.css'));
     wp_enqueue_style('main_styles',get_stylesheet_uri());
-    wp_enqueue_script('jquery',get_theme_file_uri('/vendor/js/jquery/jquery.min.js'), NULL, '1.0', true) ;
-    wp_enqueue_script('bootstrap',get_theme_file_uri('/vendor/bootstrap/js/bootstrap.bundle.min.js') );
+    wp_enqueue_script('jquery',get_theme_file_uri('/vendor/jquery/jquery.min.js'), NULL, '3.4.1', true) ;
+    wp_enqueue_script('bootstrap',get_theme_file_uri('/vendor/bootstrap/js/bootstrap.bundle.min.js'), NULL, '4.3.1', true );
+    wp_enqueue_script('main_script',get_theme_file_uri('/js/main.js'), NULL, '1.0', true );
 }
 
 add_action('wp_enqueue_scripts', 'site_files');
@@ -19,7 +20,8 @@ function site_features() {
     register_nav_menu('headerLocation', 'Header Location');
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
-    add_image_size('productImage', '900', '505', false);
+    add_image_size('productImage', '900', '505', true);
+    add_image_size('pageSectionImg', '1100', '414', true);
 }
 
 add_action('after_setup_theme', 'site_features');
@@ -39,6 +41,12 @@ function headerMenuAnchorClass ($atts){
 
 
 
+// custom widgets register
+add_filter('siteorigin_widgets_widget_folders', function($folders){
+  $path = get_template_directory() . '/custom-widgets/';
+  $folders[] = $path;
+  return $folders;
+});
 
 
 
