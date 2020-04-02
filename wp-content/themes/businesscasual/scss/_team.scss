@@ -1,0 +1,49 @@
+.team-block {
+    display: flex;
+    padding: 2rem;
+    margin: 1rem auto;
+    @include media-breakpoint-down(xs) {
+        display: block;
+        padding: 0;
+    }
+    
+    .team-block-left {
+        flex: 1;
+        margin-right: 2rem;
+        text-align: center;
+        @include media-breakpoint-down(lg) {
+            margin-right: 1rem;
+        }
+        @include media-breakpoint-down(xs) {
+            margin-right: 0;
+        }
+        .team-block-img {
+            width: 100%;
+            
+        }
+    }
+    .team-block-right {
+        flex: 1.7;
+        text-align: justify;
+        overflow-y: auto;
+        max-height: 20rem;   
+        font-size: 0.9rem; 
+        @include media-breakpoint-down(xs) {
+            padding: 0 1rem 1rem 1rem;
+            max-height: none;
+        }
+    }
+    .section-heading {
+        margin-top: 1.5rem;
+        @include media-breakpoint-down(xs) {
+            padding: 0 1rem;
+        }
+    }
+    .section-heading-lower {
+        font-size: 1.5rem;
+        margin-top: 0.5rem;
+        @include media-breakpoint-down(xs) {
+            font-size: 1.2rem;
+        }
+    }
+}

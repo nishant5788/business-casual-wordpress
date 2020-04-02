@@ -1,0 +1,17 @@
+.posts-group-list {
+    .list-group-item {
+        background: none;
+        text-align: left;
+
+        a {
+            display: block;
+            position: relative;
+        }
+
+        .badge {
+            position: absolute;
+            right: 0;
+        }
+
+    }
+}

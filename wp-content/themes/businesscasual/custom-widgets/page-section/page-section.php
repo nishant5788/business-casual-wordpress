@@ -37,17 +37,17 @@ class Page_Section extends SiteOrigin_Widget {
             'heading' => array(
                 'type' => 'text',
                 'label' => __('Heading Text'),
-                'default' => 'Heading'
+                'default' => ''
             ),
             'tagline' => array(
                 'type' => 'text',
                 'label' => __('Tagline'),
-                'default' => 'Tagline'
+                'default' => ''
             ),
             'description' => array(
                 'type' => 'tinymce',
                 'label' => __('Description'),
-                'default' => 'Lorem Ipsum'
+                'default' => ''
             ),
             'image' => array(
                 'type' => 'media',

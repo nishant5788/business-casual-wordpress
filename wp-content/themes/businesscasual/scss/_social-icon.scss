@@ -1,0 +1,19 @@
+.social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+
+    li {
+        margin-right: 1.5rem;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    .social-link {
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,8 @@
+.breadcrumb {
+    margin-top: 20px;
+    background: rgba(47, 23, 15, 0.9);
+}
+
+.breadcrumb .breadcrumb-item, .breadcrumb .breadcrumb-item a, .breadcrumb .breadcrumb-item:before, .site-heading a {
+    color: #fff;
+}
