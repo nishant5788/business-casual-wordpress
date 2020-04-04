@@ -5,6 +5,7 @@ register_post_type('product', array(
   'supports' => array('title', 'editor', 'excerpt', 'thumbnail'),
   'rewrite' => array('slug' => 'products'),
   'has_archive' => true,
+  'taxonomies' => array('category' ),
   'public' => true,
   'labels' => array(
     'name' => 'Products',

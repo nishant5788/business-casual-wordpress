@@ -39,6 +39,7 @@ a:hover {
 
     a {
         text-decoration: none !important;
+        color: #fff;
     }
 
 
@@ -88,6 +89,11 @@ a:hover {
 
 .bg-faded {
     background-color: fade-out($white, 0.15);
+    @include media-breakpoint-down(sm) {
+        &.p-5 {
+            padding: 2rem 1rem !important;
+        }
+    }
 }
 
 
@@ -102,10 +108,41 @@ img.aligncenter {
     margin-right: auto;
 }
 
+.mt-40 {
+    margin-top: 2.5rem;
+}
+
 .mt-50 {
-    margin-top: 50px;
+    margin-top: 3.125rem;
+}
+
+.mb-30 {
+    margin-bottom: 1.875rem;
+}
+
+.mb-50 {
+    margin-bottom: 3.125rem;
 }
 
 .mb-150 {
-    margin-bottom: 150px;
+    margin-bottom: 9.375rem;
+}
+
+.bold-font {
+    font-weight: 700;
+}
+
+.centered {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+span.wpcf7-not-valid-tip {
+    font-size: 0.8rem;
+}
+
+div.wpcf7-response-output {
+    position: absolute;
+    margin: 0;
 }

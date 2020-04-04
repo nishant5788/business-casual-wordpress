@@ -27,6 +27,10 @@
        
       <?php require_once(dirname(__FILE__) . '/includes/navigation.php'); ?>
 
+      <!-- <div class="btn-group searchform">
+      <i class="fa fa-search searchform-icon"></i>
+      </div> -->
+
     </div>
   </nav>
 

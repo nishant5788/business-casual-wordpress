@@ -1,15 +1,8 @@
 <?php get_header(); ?>
 
+<?php require_once(dirname(__FILE__) . '/includes/breadcrumb.php'); ?>
 
-
-<nav aria-label="breadcrumb" class="container">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="<?php echo site_url('/blog') ?>">Return to Posts</a></li>    
-    <li class="breadcrumb-item active" aria-current="page"><?php the_title() ?></li>
-  </ol>
-</nav>
-
-<section class="page-section">
+<section class="page-section mt-0">
     <div class="container">
 <?php
 

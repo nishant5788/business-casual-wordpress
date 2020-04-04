@@ -1,14 +1,7 @@
 <?php get_header(); ?>
 
 
-<section class="page-section about-heading mt-0">
-    <div class="container">
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb mb-5">
-    <li class="breadcrumb-item"><a href="<?php echo get_post_type_archive_link('product'); ?>">Return to Products</a></li>    
-    <li class="breadcrumb-item active" aria-current="page"><?php the_title() ?></li>
-  </ol>
-</nav>
+<?php require_once(dirname(__FILE__) . '/includes/breadcrumb.php'); ?>
 
 
 <?php
@@ -25,7 +18,10 @@ the_post(); ?>
           <div class="col-xl-9 col-lg-10 mx-auto">
             <div class="bg-faded rounded p-5">
               <h2 class="section-heading mb-4">
-                <span class="section-heading-upper">Strong Coffee, Strong Roots</span>
+              <span class="section-heading-upper">
+                <?php foreach((get_the_category()) as $category){
+                echo $category->name.", ";
+                }	?></span>
                 <span class="section-heading-lower"><?php the_title(); ?></span>
               </h2>
               <?php the_content() ?>

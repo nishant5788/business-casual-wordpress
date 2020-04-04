@@ -13,7 +13,10 @@ the_post(); ?>
         <div class="product-item-title d-flex">
           <div class="bg-faded p-5 d-flex ml-auto rounded">
             <h2 class="section-heading mb-0">
-              <a href="#" class="section-heading-upper">Categories here</a>
+              <span class="section-heading-upper">
+                <?php foreach((get_the_category()) as $category){
+                echo $category->name.", ";
+                }	?></span>
               <a href="<?php the_permalink(); ?>" class="section-heading-lower"><?php the_title(); ?></a>
             </h2>
           </div>

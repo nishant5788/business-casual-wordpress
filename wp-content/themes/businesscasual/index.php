@@ -34,7 +34,8 @@ the_post(); ?>
 <?php }
 
 ?>
+<div class="mb-30">
   <?php require_once(dirname(__FILE__) . '/includes/pagination.php'); ?>
-
+  </div>
 
 <?php get_footer(); ?>
