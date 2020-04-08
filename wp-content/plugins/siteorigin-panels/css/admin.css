@@ -1919,6 +1919,11 @@
 .block-editor .so-visual-styles .style-input-wrapper input {
   max-width: 100%;
 }
+.so-panels-dialog .so-visual-styles .style-input-wrapper .wp-picker-clear,
+.block-editor .so-visual-styles .style-input-wrapper .wp-picker-clear {
+  margin-left: 6px;
+  min-height: 30px;
+}
 .so-panels-dialog .so-visual-styles .style-field-measurement .measurement-inputs,
 .block-editor .so-visual-styles .style-field-measurement .measurement-inputs {
   overflow: auto;

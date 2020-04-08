@@ -15,3 +15,46 @@
 
     }
 }
+
+.post-block {
+    padding: 3rem;
+    position: relative;
+
+    @include media-breakpoint-down(lg) {
+        padding: 2rem;
+    }
+    
+    @include media-breakpoint-down(sm) {
+        padding: 1rem;
+        text-align: center;
+    }
+
+    &.has-post-img {
+        padding-left: 15rem;
+
+        @include media-breakpoint-down(md) {
+            padding-left: 13rem;
+        }
+        
+        @include media-breakpoint-down(sm) {
+            padding-left: 1rem;
+        }
+    }
+
+    .post-block-img {
+        position: absolute;
+        left: 3rem;
+        top: 3rem;
+        
+        @include media-breakpoint-down(md) {
+            left: 2rem;
+            top: 2rem;
+        }
+
+        @include media-breakpoint-down(sm) {
+            position: static;
+            display: block;
+            margin: 0 auto 2rem;
+        }
+    }
+}

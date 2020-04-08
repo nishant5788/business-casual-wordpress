@@ -13,8 +13,8 @@
 <body <?php body_class(); ?>>
 
 <h1 class="site-heading text-center text-white d-none d-lg-block">
+    <a href="/" class="site-heading-lower"><?php  the_custom_logo(); ?></a>
     <span class="site-heading-upper text-primary mb-3"><?php bloginfo('description'); ?></span>
-    <a href="/" class="site-heading-lower"><?php bloginfo('name'); ?></a>
   </h1>
 
   <!-- Navigation -->

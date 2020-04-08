@@ -5,7 +5,7 @@ $contactForm = wp_kses_post($instance['contactForm']);
 
 <section class="page-section">
 <div class="container">
-  <div class="bg-faded p-5">
+  <div class="bg-faded pl-5 pr-5 pt-5">
 <div class="row">
 
 <div class="col-md-12 text-center">
@@ -32,8 +32,8 @@ $phone = $slide['phone'];
 
 <?php endforeach; ?>
 
-<div class="contact-form-wrapper col-md-12 mt-50">
-<div class="centered">  
+<div class="col-md-12 mt-50">
+<div class="contact-form-wrapper">  
 <?php echo $contactForm; ?></div>
 </div>
 

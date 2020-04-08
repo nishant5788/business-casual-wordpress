@@ -1,6 +1,6 @@
 "use strict";
 
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -316,7 +316,7 @@ registerBlockType('siteorigin-panels/layout-block', {
         var editorDispatch = wp.data.dispatch('core/editor');
         var editorSelect = wp.data.select('core/editor');
         var tmpl = jQuery('#siteorigin-panels-add-layout-block-button').html();
-        var $addButton = jQuery(tmpl).insertAfter('.editor-writing-flow > div:first');
+        var $addButton = jQuery(tmpl).insertAfter('.editor-writing-flow > div:first, .block-editor-writing-flow > div:not([tabindex])');
         $addButton.on('click', function () {
           var layoutBlock = wp.blocks.createBlock('siteorigin-panels/layout-block', {});
           var isEmpty = editorSelect.isEditedPostEmpty();

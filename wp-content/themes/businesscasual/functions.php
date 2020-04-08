@@ -49,7 +49,7 @@ add_filter('siteorigin_widgets_widget_folders', function($folders){
   return $folders;
 });
 
-
+// Team Order
 function team_post_order($query) {
 
   if ($query->get('post_type') == 'team')
@@ -60,6 +60,41 @@ function team_post_order($query) {
 return $query;
 }
 add_filter('pre_get_posts', 'team_post_order');
+
+
+
+/**
+ * Register our sidebars and widgetized areas.
+ *
+ */
+function arphabet_widgets_init() {
+
+	register_sidebar( array(
+		'name'          => 'Footer Text',
+		'id'            => 'home_right_1',
+		'before_widget' => '<div>',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="rounded">',
+		'after_title'   => '</h2>',
+	) );
+
+}
+add_action( 'widgets_init', 'arphabet_widgets_init' );
+
+
+// Adding Logo Support
+function themename_custom_logo_setup() {
+  $defaults = array(
+  'height'      => 100,
+  'width'       => 600,
+  'flex-height' => true,
+  'flex-width'  => true,
+  'header-text' => array( 'site-title', 'site-description' ),
+  );
+  add_theme_support( 'custom-logo', $defaults );
+ }
+ add_action( 'after_setup_theme', 'themename_custom_logo_setup' );
+ 
 
 
 ?>

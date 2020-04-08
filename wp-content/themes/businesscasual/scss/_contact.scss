@@ -1,5 +1,5 @@
 .contact-block {
-    
+
     margin-top: 3rem;
 
     .contact-block-list {
@@ -20,4 +20,53 @@
             color: $primary;
         }
     }
+}
+
+span.wpcf7-not-valid-tip {
+    font-size: 0.8rem;
+}
+
+div.wpcf7-response-output {
+    margin: 0;
+}
+
+div.wpcf7-validation-errors {
+    background-color: red;
+    color: #fff;
+    border: none;
+    padding: 0.7rem;
+    @extend .rounded;
+}
+
+
+.contact-form-wrapper {
+    background: #e6a75661;
+    margin-left: -3rem;
+    width: calc(100% + 6rem);
+    padding: 2rem;
+    text-align: center;
+    
+    .form-control {
+        background-color: rgba(255,255,255,0.4);
+        border-color: rgba(255,255,255,0.1);
+        margin-top: 0.5rem;
+        &.wpcf7-not-valid {
+        border-color: red;
+        }
+    }
+    
+    .form-control:focus {
+        background-color: #fff;
+    }
+    
+    textarea {
+        resize: none;
+        height: 12rem;
+    }
+    
+    label {
+        text-align: left;
+    }
+
+    
 }

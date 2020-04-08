@@ -1,9 +1,15 @@
 <?php get_header(); ?>
 
 
-<?php require_once(dirname(__FILE__) . '/includes/breadcrumb.php'); ?>
+<nav aria-label="breadcrumb" class="container mb-50 mt-50">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="<?php echo site_url('/products') ?>">All Products</a></li>    
+    <li class="breadcrumb-item active" aria-current="page"><?php the_title() ?></li>
+  </ol>
+</nav>
 
-
+<section class="page-section">
+<div class="container">
 <?php
 
 while(have_posts()) {
@@ -39,9 +45,9 @@ $relatedPosts = get_field('related_posts');
 
 if($relatedPosts) {
 
-  echo '<div class="related-post-section mt-50">';
+  echo '<div class="related-post-section container mt-50">';
   echo '<h2 class="text-white">Related Post(s):-</h2>';
-  echo '<ul class="related-posts-list">';
+  echo '<ul class="related-posts-list mb-0">';
 
   foreach($relatedPosts as $relatedPost) { ?>
 
