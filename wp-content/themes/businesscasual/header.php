@@ -16,6 +16,7 @@
     <a href="/" class="site-heading-lower"><?php  the_custom_logo(); ?></a>
     <span class="site-heading-upper text-primary mb-3"><?php bloginfo('description'); ?></span>
   </h1>
+  
 
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
@@ -27,10 +28,9 @@
        
       <?php require_once(dirname(__FILE__) . '/includes/navigation.php'); ?>
 
-      <!-- <div class="btn-group searchform">
-      <i class="fa fa-search searchform-icon"></i>
-      </div> -->
-      
+      <div class="btn-group searchform-trigger d-none">
+      <i class="fa fa-search searchform-trigger-icon"></i>
+      </div>
 
     </div>
   </nav>

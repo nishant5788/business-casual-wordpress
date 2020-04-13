@@ -84,6 +84,7 @@ a:hover {
         display: block;
         font-size: 3rem;
         font-weight: 100;
+
         @include media-breakpoint-down(md) {
             font-size: 2.5rem;
         }
@@ -92,6 +93,7 @@ a:hover {
 
 .bg-faded {
     background-color: fade-out($white, 0.15);
+
     @include media-breakpoint-down(sm) {
         &.p-5 {
             padding: 2rem 1rem !important;
@@ -139,4 +141,23 @@ img.aligncenter {
     display: table;
     margin-left: auto;
     margin-right: auto;
+}
+
+.overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+    display: none;
+
+    .overlay-close {
+        color: #fff;
+        text-align: right;
+        width: 100%;
+        font-size: 3rem;
+        padding: 2rem;
+    } 
 }

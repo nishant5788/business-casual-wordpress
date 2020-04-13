@@ -11,5 +11,22 @@
     if($('body').hasClass('logged-in')) {
         $('#menu-item-132').remove();
     }
+
+    // Triggering Team Detail Modal
+    $('.team-detail-modal-trigger').on('click', function(){
+        var $this = $(this);
+        var $target = $this.data('target');
+        $($target).modal();
+    });
+    
+    // SearchForm
+    $('.searchform-trigger').on('click', function(){
+        $('.search-overlay, .searchform').fadeIn();
+    });
+    
+    // Overlay Close
+    $('.search-overlay').on('click', function(){
+        $('.search-overlay, .searchform').fadeOut();
+    }); 
   
 })(jQuery);

@@ -28,7 +28,7 @@ $designation = get_field('designation');
       <span class="section-heading-upper"><?php echo $designation; ?></span>
       <?php } ?>
       
-      <span class="section-heading-lower"><?php the_title(); ?></span>
+      <span class="section-heading-lower"><?php the_title() ?></span>
        </h2>
        <ul class="social-icons justify-content-center">
        <?php if($facebook) { ?>
@@ -45,10 +45,43 @@ $designation = get_field('designation');
        </ul>
     </div>
     <div class="team-block-right">
-    <?php the_content(); ?>
+    <?php
+    $text = trim( strip_tags( get_the_content()));
+    $totalWords = substr_count( "$text ", ' ' );
+
+    if($totalWords > 100) {
+    echo wp_trim_words(get_the_content(),100);
+    ?>
+    <a href="javascript:;" class="text-primary team-detail-modal-trigger" data-target="#<?php echo "team-detail-modal" . the_ID(); ?>">Read More</a>
+  <?php } else {
+    echo the_content();
+  } 
+    ?>
     </div>
     </div>
+
+    <!-- Modal -->
+    <?php if($totalWords > 100) { ?>
+<div id="<?php echo "team-detail-modal" . the_ID(); ?>" class="modal fade team-detail-modal" tabindex="-1" role="dialog" aria-labelledby="teamDetailModal" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+    <div class="modal-content">
+    <div class="modal-header">
+        <h5 class="modal-title"><?php the_title(); ?> </h5>
+      </div>
+      <div class="modal-body">
+      <?php the_content(); ?>    
     </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+    <?php } ?>
+ <!-- Modal -->
+
+    </div>
+
       <?php } ?>
 
 
