@@ -17,7 +17,7 @@ add_action('wp_enqueue_scripts', 'site_files');
 
 
 function site_features() {
-    register_nav_menu('headerLocation', 'Header Location');
+    register_nav_menu('headerLocation', 'Header');
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
     add_image_size('productImage', '900', '505', true);
@@ -71,10 +71,10 @@ function arphabet_widgets_init() {
 
 	register_sidebar( array(
 		'name'          => 'Footer Text',
-		'id'            => 'home_right_1',
-		'before_widget' => '<div>',
+		'id'            => 'footer_widget',
+		'before_widget' => '<div class="small">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h2 class="rounded">',
+		'before_title'  => '<h2 class="d-none">',
 		'after_title'   => '</h2>',
 	) );
 
