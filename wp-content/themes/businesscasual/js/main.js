@@ -21,12 +21,43 @@
     
     // SearchForm
     $('.searchform-trigger').on('click', function(){
-        $('.search-overlay, .searchform').fadeIn();
+        showSearch(); 
     });
     
     // Overlay Close
     $('.search-overlay').on('click', function(){
-        $('.search-overlay, .searchform').fadeOut();
+        closeSearch();
     }); 
+    
+    // Opening Search from Keys
+    // $('body').on('keyup', function(e) {
+    //     var $keyCode = e.keyCode;
+        
+    //     if($keyCode === 83) {
+    //         showSearch();
+    //     }
+
+    //     if($keyCode === 27) {
+    //         closeSearch();
+    //     }
+
+    //     console.log(e);
+
+        
+    // });
+
+
+    function showSearch() {
+        $('.search-overlay, .searchform').fadeIn();
+        $('html, body').css('overflow', 'hidden');
+    }
+    
+    function closeSearch() {
+        console.log('close');
+        if($('.searchform:visible')) {
+        $('.search-overlay, .searchform').fadeOut();
+        $('html, body').css('overflow', 'visible');
+    }
+}
   
 })(jQuery);

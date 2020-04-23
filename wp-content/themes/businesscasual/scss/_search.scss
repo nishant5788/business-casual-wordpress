@@ -1,9 +1,12 @@
 .searchform-trigger {
 
     .searchform-trigger-icon {
-        color: #fff;
+        color: rgba(255,255,255,0.7);
         cursor: pointer;
         font-size: 1.2rem;
+        &:hover {
+            color: rgba(255,255,255,0.4);
+        }
     }
 }
 
